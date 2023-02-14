@@ -14,7 +14,7 @@ $orchard = new Orchard();
 for($i = 0; $i < 10; $i++)
 {
     $orchard->plant(new AppleTree());
-    $sql = "INSERT INTO Trees SET Apple_tree = 'Яблоня'";
+    $sql = "INSERT INTO Trees SET Fruit_trees = 'Яблоня'";
     $result = mysqli_query($mysqli, $sql); 
 }
     
@@ -22,10 +22,9 @@ for($i = 0; $i < 10; $i++)
 for($i = 0; $i < 15; $i++)
 {
     $orchard->plant(new PearTree());
-    $sql = "INSERT INTO Trees (Pear_tree) VALUES ('Груша')";
+    $sql = "INSERT INTO Trees SET Fruit_trees = 'Груша'";
     $result = mysqli_query($mysqli, $sql); 
 }
-
 
 $harvest = $orchard->harvest();
 
